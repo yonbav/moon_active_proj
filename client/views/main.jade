@@ -1,0 +1,21 @@
+extends layout
+
+block content
+  h1 Messaging System
+  form(id="add-message" name="add-message", method="post")
+    div
+      span.label Your Message:
+    div
+      textarea(id="content" name="content", cols="40", rows="5", required)
+    div
+      span.label Publishing Date:
+      input(id='date', name='date', type='text', required)
+    div
+      span.label Publishing Time:
+      input(id='time', name='time', type= 'text', required)
+    div
+      button.submit(type=submit) send
+    //- div.messages
+    //-   each message in messages
+    //-     li.message=message
+      
