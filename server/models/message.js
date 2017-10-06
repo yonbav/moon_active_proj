@@ -42,11 +42,13 @@ exports.echoAtTime = function(date, content) {
 // function to handle unpublished messages
 var timingMessagesInterval = setInterval(function()
 {
+  // gets the first item in the ordered set
   pubClient.zrange(ORDERED_SET_NAME, 0, 0, 'withscores', function(err, firstItem){
     // Checks if an error has occured
     if(err){console.log(err.toString())}
     // Checks if there are items in the list
     else if(firstItem[1] < Date.now()){
+      // cricital part has to be inside a lock
       lock.acquire('key', function() {
         //publishes the message
         pubClient.publish(CHANNEL, firstItem[0])
