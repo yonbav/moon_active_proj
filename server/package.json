@@ -1,0 +1,19 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "project for moon active",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "debugMode": "node --debug app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "async-lock": "^1.0.0",
+    "body-parser": "^1.18.2",
+    "express": "^4.16.1",
+    "redis": "^2.8.0"
+  },
+  "devDependencies": {}
+}
