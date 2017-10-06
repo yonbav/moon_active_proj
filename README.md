@@ -5,4 +5,4 @@ assumptions:
    the content fromat is a simple string and the date is the number of milliseconds since midnight January 1, 1970
    which can be achieved with d = new date; d.getTime()
 2. The server prints messages to the console but does not keep on saving them at the database after they were printed to the console.
-3. The Redis DB connection that the server will look for is the default root 
+3. The Redis DB connection that the server will look for is the default port of redis on localhost 
